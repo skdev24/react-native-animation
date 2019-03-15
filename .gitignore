@@ -1,0 +1,11 @@
+# Expo
+.expo
+__generated__
+
+# macOS
+.DS_Store
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
