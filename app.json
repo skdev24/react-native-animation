@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tabbar-animation",
-    "slug": "tabbar-animation",
+    "name": "react-native-animation",
+    "slug": "react-native-animation",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [

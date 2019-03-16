@@ -12,7 +12,8 @@ import { Svg } from 'expo';
 import StaticTabbar from './StaticTabbar';
 
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);
-const { width } = Dimensions.get('window');
+const { width: newWidth } = Dimensions.get('window');
+const width = newWidth + 20
 const height = 64;
 const { Path } = Svg;
 const tabs = [
@@ -45,14 +46,14 @@ const getPath = () => {
     .x(d => d.x)
     .y(d => d.y)
     .curve(shape.curveBasis)([
-    { x: width - 10, y: 0 },
-    { x: width - 5, y: 0 },
-    { x: width + 5, y: 2 },
+    { x: width - 30, y: 0 },
+    { x: width - 15, y: 0 },
+    { x: width + 5, y: 0 },
     { x: width + 10, y: height - 20 },
     { x: width + tabWidth - 10, y: height - 20 },
-    { x: width + tabWidth - 5, y: 2 },
-    { x: width + tabWidth + 5, y: 0 },
+    { x: width + tabWidth - 5, y: 0 },
     { x: width + tabWidth + 10, y: 0 },
+    { x: width + tabWidth + 30, y: 0 },
   ]);
   const right = shape
     .line()
@@ -79,7 +80,7 @@ export default class Tabbar extends React.PureComponent {
       outputRange: [-width, 0],
     });
     return (
-      <>
+      <View style={styles.mainContainer}>
         <View {...{ height, width }}>
           <AnimatedSvg
             width={width * 2}
@@ -93,12 +94,17 @@ export default class Tabbar extends React.PureComponent {
           </View>
         </View>
         <SafeAreaView style={styles.container} />
-      </>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    backgroundColor: '#ed484d',
+  },
   container: {
     backgroundColor,
   },

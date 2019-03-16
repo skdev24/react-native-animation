@@ -118,5 +118,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 26,
+    alignSelf: 'center',
+    marginLeft: 4
   },
 });

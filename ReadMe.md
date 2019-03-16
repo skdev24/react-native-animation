@@ -6,10 +6,8 @@
 yarn install
 ```
 
-### 1. [Tabbar Animation](./components/Tabbar/Tabbar.js)
+### Launch App from Expo
 
-<img src="./assets/tabbar.gif" height="700" width="350">
+### [Expo QR code : ](https://expo.io/@skdev24/react-native-animation)
 
-### 2. [Opacity](./components/Opacity.js)
-
-<img src="./assets/opacity.gif" height="700" width="350">
+<img src="./assets/expo_app.png" height="300" width="300">
